@@ -30,7 +30,9 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: var(--white);
+            /* Linear Gradient Background - Advanced CSS Feature */
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
             margin: 0;
             padding: 20px;
             line-height: 1.6;
@@ -78,15 +80,20 @@
             padding: 40px 50px;
             background: var(--white);
             border-radius: var(--border-radius);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            /* Advanced Box Shadows - Multiple layers for depth */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                        0 10px 20px rgba(0, 0, 0, 0.15),
+                        0 20px 40px rgba(0, 0, 0, 0.1);
             transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
             animation: fadeIn 0.8s ease-out;
         }
 
-        /* Hover Effect on Resume Container */
+        /* Hover Effect on Resume Container with Enhanced Shadow */
         .resume-container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15),
+                        0 15px 30px rgba(0, 0, 0, 0.2),
+                        0 25px 50px rgba(0, 0, 0, 0.15);
         }
 
         /* Flexbox for Header - Advanced CSS Feature */
@@ -128,6 +135,10 @@
             font-size: 1.3em;
             margin-bottom: var(--spacing-medium);
             font-weight: 600;
+            padding: 8px 20px;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 25px;
+            display: inline-block;
         }
 
         .section-title {
@@ -297,7 +308,8 @@
         }
 
         .skill-pill {
-            background: var(--primary-color);
+            /* Linear Gradient Background - Advanced CSS Feature */
+            background: linear-gradient(135deg, var(--primary-color), #45a049);
             color: var(--white);
             padding: 8px 18px;
             border-radius: 25px;
@@ -325,7 +337,8 @@
         .skill-pill:hover {
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            background: #45a049;
+            /* Reverse gradient on hover */
+            background: linear-gradient(135deg, #45a049, var(--primary-color));
         }
 
         .skills-list {
@@ -497,6 +510,68 @@
 
             .section-title {
                 font-size: 1.4em;
+            }
+        }
+
+        /* Print Styles - Advanced CSS Feature */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .resume-container {
+                max-width: 100%;
+                margin: 0;
+                padding: 20px;
+                box-shadow: none;
+                border: 1px solid var(--dark-color);
+                border-radius: 0;
+                animation: none;
+            }
+
+            .resume-container:hover {
+                transform: none;
+                box-shadow: none;
+            }
+
+            header {
+                animation: none;
+            }
+
+            .contact {
+                animation: none;
+                background: white;
+                border: 1px solid var(--light-gray);
+            }
+
+            .skill-pill {
+                animation: none;
+                background: var(--light-gray);
+                color: var(--dark-color);
+                border: 1px solid var(--primary-color);
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+
+            .skill-pill:hover {
+                transform: none;
+                background: var(--light-gray);
+            }
+
+            section > div:not(.skills-container):not(.contact):not(.contact-line) {
+                page-break-inside: avoid;
+            }
+
+            /* Ensure content doesn't break across pages */
+            h1, h2, .section-title {
+                page-break-after: avoid;
+            }
+
+            /* Hide decorative elements that don't print well */
+            h1::after,
+            .section-title::before {
+                display: none;
             }
         }
     </style>
