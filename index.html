@@ -46,6 +46,17 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        /* Flexbox for Header - Advanced CSS Feature */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid var(--dark-color);
+            margin-bottom: 30px;
+        }
+
         h1 {
             font-size: 2.5em;
             margin-bottom: 0.3em;
@@ -117,12 +128,22 @@
             margin-bottom: var(--spacing-large);
         }
 
+        /* Flexbox for Contact Section */
         .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
             margin-bottom: 1.5em;
             padding: 15px;
             background: var(--light-gray);
             border-radius: var(--border-radius);
             border-left: 4px solid var(--primary-color);
+        }
+
+        .contact-line {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .skills-list {
@@ -143,10 +164,10 @@
 
         <!-- Contact Section -->
         <section class="contact">
-            Tan Phu District, Thu Duc Ward<br>
-            Ho Chi Minh City, VN 12345<br>
-            (84) 898-846-330<br>
-            hoangkiet.2905@gmail.com
+            <div class="contact-line">📍 Tan Phu District, Thu Duc Ward</div>
+            <div class="contact-line">🏙️ Ho Chi Minh City, VN 12345</div>
+            <div class="contact-line">📱 (84) 898-846-330</div>
+            <div class="contact-line">📧 hoangkiet.2905@gmail.com</div>
         </section>
 
         <!-- Skills Section -->
