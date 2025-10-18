@@ -107,6 +107,20 @@
             color: var(--dark-color);
             text-transform: uppercase;
             letter-spacing: 2px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        /* ::after pseudo-element for decorative underline - Advanced CSS Feature */
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--primary-color);
         }
 
         .role {
@@ -125,6 +139,20 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: color var(--transition-speed) ease;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        /* ::before pseudo-element for animated underline - Advanced CSS Feature */
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            transition: width var(--transition-speed) ease;
         }
 
         /* Hover Effect on Section Titles */
@@ -132,11 +160,33 @@
             color: #45a049;
         }
 
+        .section-title:hover::before {
+            width: 120px;
+        }
+
         .edu-title, .exp-title {
             color: var(--secondary-color);
             font-weight: bold;
             font-size: 1.1em;
             margin-bottom: var(--spacing-small);
+            position: relative;
+            display: inline-block;
+        }
+
+        /* ::after pseudo-element for decorative accent - Advanced CSS Feature */
+        .edu-title::after, .exp-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-color);
+            transition: width var(--transition-speed) ease;
+        }
+
+        .edu-title:hover::after, .exp-title:hover::after {
+            width: 100%;
         }
 
         .date {
@@ -152,9 +202,25 @@
             margin-left: 20px;
         }
 
+        ul {
+            list-style-type: none;
+        }
+
         ul li {
             margin-bottom: 0.3em;
             color: #333;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        /* ::before pseudo-element for custom bullet points - Advanced CSS Feature */
+        ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 1.5em;
+            line-height: 1;
         }
 
         /* Smooth Transitions for Experience/Education Sections */
@@ -209,6 +275,17 @@
             align-items: center;
             gap: 10px;
             font-size: 0.95em;
+            position: relative;
+        }
+
+        /* :first-child pseudo-class selector - Advanced CSS Feature */
+        .contact-line:first-child {
+            font-weight: 600;
+        }
+
+        /* :last-child pseudo-class selector */
+        .contact-line:last-child {
+            color: var(--secondary-color);
         }
 
         /* Flexbox for Skills Section with Pills - Advanced CSS Feature */
