@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoang An Thien's CV - Junior Backend Developer</title>
     <style>
+        /* CSS Custom Properties (Variables) - Advanced CSS Feature */
+        :root {
+            --primary-color: #4CAF50;
+            --secondary-color: #2196F3;
+            --dark-color: #222;
+            --text-gray: #666;
+            --light-gray: #f5f5f5;
+            --white: #fff;
+            --border-width: 2px;
+            --border-radius: 8px;
+            --spacing-small: 0.5em;
+            --spacing-medium: 1em;
+            --spacing-large: 2em;
+        }
+
         /* Basic Reset */
         * {
             margin: 0;
@@ -13,80 +28,106 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--white);
             margin: 0;
-            padding: 0;
+            padding: 20px;
             line-height: 1.6;
+            color: var(--dark-color);
         }
 
         .resume-container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 40px auto;
-            border: 2px solid #222;
-            padding: 32px 40px;
-            background: #fff;
+            border: var(--border-width) solid var(--dark-color);
+            padding: 40px 50px;
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         h1 {
-            font-size: 2.2em;
-            margin-bottom: 0.2em;
+            font-size: 2.5em;
+            margin-bottom: 0.3em;
+            color: var(--dark-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .role {
-            color: #4CAF50;
-            font-size: 1.2em;
-            margin-bottom: 1em;
+            color: var(--primary-color);
+            font-size: 1.3em;
+            margin-bottom: var(--spacing-medium);
+            font-weight: 600;
         }
 
         .section-title {
-            color: #4CAF50;
+            color: var(--primary-color);
             font-weight: bold;
-            margin-top: 2em;
-            margin-bottom: 0.5em;
-            font-size: 1.1em;
+            margin-top: var(--spacing-large);
+            margin-bottom: var(--spacing-medium);
+            font-size: 1.3em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .edu-title, .exp-title {
-            color: #2196F3;
+            color: var(--secondary-color);
             font-weight: bold;
-            font-size: 1em;
+            font-size: 1.1em;
+            margin-bottom: var(--spacing-small);
         }
 
         .date {
-            color: #666;
+            color: var(--text-gray);
             font-size: 0.9em;
             font-style: italic;
+            margin-bottom: var(--spacing-small);
         }
 
         ul {
-            margin-top: 0.3em;
-            margin-bottom: 0.3em;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
             margin-left: 20px;
         }
 
+        ul li {
+            margin-bottom: 0.3em;
+            color: #333;
+        }
+
         .skills-used {
-            margin-top: 0.5em;
+            margin-top: var(--spacing-medium);
+            padding: 10px;
+            background: var(--light-gray);
+            border-radius: 5px;
+            font-size: 0.9em;
         }
 
         .internet {
-            color: #43A047;
+            color: var(--primary-color);
             font-weight: bold;
-            margin-top: 2em;
+            margin-top: var(--spacing-large);
+            font-size: 1.2em;
         }
 
         hr {
             border: none;
-            border-top: 2px solid #222;
-            margin-bottom: 2em;
+            border-top: var(--border-width) solid var(--dark-color);
+            margin-bottom: var(--spacing-large);
         }
 
         .contact {
             margin-bottom: 1.5em;
+            padding: 15px;
+            background: var(--light-gray);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--primary-color);
         }
 
         .skills-list {
             margin-bottom: 1.5em;
+            line-height: 1.8;
         }
     </style>
 </head>
