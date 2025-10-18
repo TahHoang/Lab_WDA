@@ -128,13 +128,13 @@
             margin-bottom: var(--spacing-large);
         }
 
-        /* Flexbox for Contact Section */
+        /* CSS Grid for Contact Section - Advanced CSS Feature */
         .contact {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
             margin-bottom: 1.5em;
-            padding: 15px;
+            padding: 20px;
             background: var(--light-gray);
             border-radius: var(--border-radius);
             border-left: 4px solid var(--primary-color);
@@ -144,6 +144,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            font-size: 0.95em;
         }
 
         .skills-list {
