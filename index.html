@@ -147,6 +147,25 @@
             font-size: 0.95em;
         }
 
+        /* Flexbox for Skills Section with Pills - Advanced CSS Feature */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 1.5em;
+        }
+
+        .skill-pill {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
         .skills-list {
             margin-bottom: 1.5em;
             line-height: 1.8;
@@ -174,8 +193,17 @@
         <!-- Skills Section -->
         <section>
             <h2 class="section-title">Skills</h2>
-            <div class="skills-list">
-                HTML, CSS, JavaScript, Python, Node.js, SQL, MongoDB, Git & GitHub, RESTful APIs, Responsive Design
+            <div class="skills-container">
+                <span class="skill-pill">HTML5</span>
+                <span class="skill-pill">CSS3</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">SQL</span>
+                <span class="skill-pill">MongoDB</span>
+                <span class="skill-pill">Git & GitHub</span>
+                <span class="skill-pill">RESTful APIs</span>
+                <span class="skill-pill">Responsive Design</span>
             </div>
         </section>
 
